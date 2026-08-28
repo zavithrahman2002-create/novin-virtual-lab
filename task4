@@ -1,0 +1,56 @@
+# ⚕️ Severity & Case Classification (VirtualWorkLab Task 4)
+
+## 🧠 Overview
+This repository contains the **Severity & Case Classification** project from **VirtualWorkLab Task 4**.  
+It focuses on classifying adverse drug reactions (ADRs) based on **seriousness** and **expectedness**, following pharmacovigilance guidelines.  
+The task builds on previous modules such as **ADR Reporting (Task 2)** and **Causality Assessment (Task 3)**.
+
+---
+
+## 🎯 Objective
+Evaluate multiple ADR cases and determine their clinical impact using standard pharmacovigilance criteria:
+- **Seriousness** — whether the reaction leads to hospitalization, disability, or death.  
+- **Expectedness** — whether the reaction is known or documented for the drug.
+
+---
+
+## 🧩 Classification Criteria
+| **Criterion** | **Definition** |
+|----------------|----------------|
+| **Serious** | Results in death, life‑threatening condition, hospitalization, or significant disability. |
+| **Non‑Serious** | Minor or transient reaction not requiring medical intervention. |
+| **Expected** | Reaction previously known or documented for the drug. |
+| **Unexpected** | Reaction not previously reported or documented. |
+
+---
+
+## 🧪 Example Case Table
+| **Drug** | **Adverse Reaction** | **Seriousness** | **Expectedness** |
+|-----------|----------------------|-----------------|------------------|
+| Amoxicillin | Skin rash, itching | Non‑Serious | Expected |
+| Ibuprofen | Gastrointestinal bleeding requiring hospitalization | Serious | Expected |
+| Metformin | Lactic acidosis | Serious | Unexpected |
+| Atorvastatin | Elevated liver enzymes | Non‑Serious | Expected |
+| Levofloxacin | Tendon rupture | Serious | Expected |
+
+**Summary:**  
+- Serious cases → 3  
+- Non‑Serious cases → 2  
+- Expected cases → 5  
+
+---
+
+## 💻 Sample Code
+```python
+def classify_severity(seriousness, expectedness):
+    if seriousness and expectedness:
+        return "Serious & Expected"
+    elif seriousness and not expectedness:
+        return "Serious & Unexpected"
+    elif not seriousness and expectedness:
+        return "Non‑Serious & Expected"
+    else:
+        return "Non‑Serious & Unexpected"
+
+result = classify_severity(True, True)
+print(f"Case Classification: {result}")
