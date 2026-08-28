@@ -1,0 +1,25 @@
+# 🧾 ADR Reporting & Documentation (VirtualWorkLab Task 2)
+
+## 📘 Overview
+This project simulates a **pharmacovigilance ADR reporting system** used in healthcare and pharmaceutical industries.  
+It is part of the **VirtualWorkLab Task 2** — *ADR Reporting & Documentation*.
+
+The goal is to complete a structured ADR reporting form based on a given case scenario, documenting suspected adverse drug reactions (ADRs) accurately.
+
+---
+
+## 🧠 Features
+- Patient Information entry (Name, Age, Gender)
+- Suspected Medicine details (Name, Dose, Start Date)
+- Adverse Reaction documentation (Description, Date of Recovery, Seriousness)
+- Reporter Information (Name, Contact)
+- Additional Notes section for clinical observations
+
+---
+
+## 🧩 Technologies Used
+- HTML5, CSS3, JavaScript  
+- Python (optional backend for data handling)  
+- Bootstrap for responsive UI  
+
+---
