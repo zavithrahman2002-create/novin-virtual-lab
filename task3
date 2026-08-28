@@ -1,0 +1,53 @@
+# 💊 Causality Assessment of Drug Reactions (VirtualWorkLab Task 3)
+
+## 🧠 Overview
+This repository contains the **Causality Assessment of Drug Reactions** project from **VirtualWorkLab Task 3**.  
+It evaluates the relationship between a drug and an observed adverse reaction using standard causality‑assessment methods.  
+The task builds on **ADR Reporting & Documentation (Task 2)** and focuses on classifying reactions as **Certain**, **Probable**, or **Possible**.
+
+---
+
+## 🎯 Objective
+Analyze case studies and determine the likelihood that a drug caused an adverse reaction based on:
+- **Temporal relationship**
+- **Dechallenge response**
+- **Alternative causes**
+- **Rechallenge (if applicable)**
+
+---
+
+## 🧩 Assessment Criteria
+| **Criterion** | **Description** |
+|---------------|-----------------|
+| **Temporal Relationship** | Did the reaction occur after drug administration? |
+| **Dechallenge** | Did the reaction resolve after stopping the drug? |
+| **Alternative Causes** | Could another factor explain the reaction? |
+| **Rechallenge** | Did the reaction reappear when the drug was re‑administered? |
+
+---
+
+## 🧪 Example Case
+| **Parameter** | **Details** |
+|----------------|-------------|
+| **Patient** | 45‑year‑old Female |
+| **Suspected Drug** | Drug X |
+| **Adverse Reaction** | Skin rash |
+| **Outcome** | Recovered after stopping the drug |
+| **Assessment Result** | **Probable** |
+
+---
+
+## 💻 Sample Code
+```python
+def causality_assessment(temporal, dechallenge, alternative, rechallenge):
+    if temporal and dechallenge and not alternative and rechallenge:
+        return "Certain"
+    elif temporal and dechallenge and not alternative:
+        return "Probable"
+    elif temporal:
+        return "Possible"
+    else:
+        return "Unrelated"
+
+result = causality_assessment(True, True, False, False)
+print(f"Causality Assessment Result: {result}")
