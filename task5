@@ -1,0 +1,68 @@
+# 🧾 Individual Case Safety Report (ICSR) – VirtualWorkLab Task 5
+
+## 🧠 Overview
+This repository contains the **Individual Case Safety Report (ICSR)** project from **VirtualWorkLab Task 5**.  
+It simulates a complete pharmacovigilance assessment on a detailed case study, including:
+- **ADR Identification**
+- **Reporting**
+- **Causality Assessment**
+- **Severity Classification**
+
+The project mirrors the responsibilities of a **Drug Safety Associate**, ensuring accurate documentation and evaluation of adverse drug reactions (ADRs).
+
+---
+
+## 🎯 Objective
+Perform a full pharmacovigilance workflow:
+1. Identify the suspected ADR.  
+2. Report the reaction using structured documentation.  
+3. Assess causality between the drug and reaction.  
+4. Classify the case based on seriousness and expectedness.
+
+---
+
+## 🧩 Key Deliverables
+| **Step** | **Description** |
+|-----------|----------------|
+| **ADR Identification** | Recognize and record the adverse reaction. |
+| **Reporting** | Document patient and drug details in the ICSR form. |
+| **Causality Assessment** | Evaluate the relationship between drug and reaction. |
+| **Classification** | Determine seriousness and expectedness of the case. |
+
+---
+
+## 🧪 Example Case
+| **Parameter** | **Details** |
+|----------------|-------------|
+| **Patient** | 45‑year‑old Female |
+| **Suspected Drug** | Amoxicillin |
+| **Adverse Reaction** | Skin rash, itching |
+| **Causality Assessment** | Probable |
+| **Severity Classification** | Non‑Serious & Expected |
+
+**Summary:**  
+This case demonstrates a **probable, non‑serious, expected ADR** following Amoxicillin administration.
+
+---
+
+## 💻 Sample Code
+```python
+class ICSRReport:
+    def __init__(self, patient, drug, reaction, causality, severity):
+        self.patient = patient
+        self.drug = drug
+        self.reaction = reaction
+        self.causality = causality
+        self.severity = severity
+
+    def generate_report(self):
+        return {
+            "Patient": self.patient,
+            "Drug": self.drug,
+            "Reaction": self.reaction,
+            "Causality": self.causality,
+            "Severity": self.severity
+        }
+
+report = ICSRReport("45-year-old Female", "Amoxicillin", "Skin rash, itching", "Probable", "Non-Serious & Expected")
+print(report.generate_report())
